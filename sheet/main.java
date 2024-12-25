@@ -45,6 +45,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //AlertDialog.Builder builder = new AlertDialog.Builder();
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Thoat ung dung");
+                builder.setMessage("ban co muon thoat khong");
+                builder.setPositiveButton("ko", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                builder.setNegativeButton("co", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
 
