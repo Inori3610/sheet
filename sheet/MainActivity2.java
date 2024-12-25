@@ -58,6 +58,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Nut sua",Toast.LENGTH_LONG).show();
+                listSV.set(vitri, new Xe(edt_maxe.getText().toString(),edt_tenxe.getText().toString(),edt_loaixe.getText().toString(),edt_mauxe.getText().toString(),edt_gia.getText().toString(),edt_hangsx.getText().toString()));
+                adapter.notifyDataSetChanged();
             }
         });
 
@@ -65,6 +67,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Nut xoa",Toast.LENGTH_LONG).show();
+                listXe.remove(vitri);
+                adapter.notifyDataSetChanged();
             }
         });
 
@@ -76,7 +80,16 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-
+        lvsv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                vitri = i ;
+                edt_masv.setText(listXe.get(i).getMaxe());
+                edt_tenmay.setText(listXe.get(i).getMaxe());
+                edt_hangsx.setText(listXe.get(i).getMaxe());
+            }
+        });
+            
     }
     void linking(){
         edt_masv=findViewById(R.id.edt_masv);
