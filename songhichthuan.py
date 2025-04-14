@@ -11,3 +11,9 @@ def is_palindrome_number(n):
             return False  # Not a palindrome
     
     return True  # It's a palindrome
+
+n = int(input("Nhap so: "))
+if is_palindrome_number(n):
+    print(f"{n} la so doi xung")
+else:
+    print(f"{n} khong phai la so doi xung")
