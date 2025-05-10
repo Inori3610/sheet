@@ -1,0 +1,51 @@
+whoami                            # display current user
+hostname                          # display hostname
+date                              # display current date time
+cd                                # change directory
+ifconfig [option]                 # for check network ip
+iwconfig                          # for check wireless network ssid id
+ping [URL]                        # check internet connectivity
+ethtool [interface]               # for check lan connect
+ls                                # list all directory
+ls -all                           # list all directory with executeable modifi
+mkdir [filename]                  # make folder
+touch [filename]                  # make file name
+w                                 # check active user
+pwd                               # display current path
+history                           # display history command
+chmod [option] [file]             # change file modifi like executeable 777 for all
+cat [filename]                    # display content of file to terminal
+neofetch                          # flexing
+rm [option]                       # remove file or folder
+tree                              # display list directory like tree
+ranger                            # terminal base gui directory navigate
+nvim                              # open Neovim
+ps                                # check running process
+kill [process]                    # kill processID
+btop                              # terminal base task manager
+top                               # real time system resource usage
+netstat -nat                      # confirm connect internet
+code                              # open VS code
+netdiscover                       # display connected device on current network
+cmatrix                           # matrix rain :)
+mv [filepath] [filepath]          # move file or rename it
+cp [filepath] [filepath]          # copy file to file path
+journalctl [option]               # display history but it like event viewer
+wifite [option]                   # automatic hack wifi script
+airmon-ng [option] [interface]    # start or stop monitor mode for chosse interface
+systemctl [option] NetworkManager # turn on or off network
+nmap [IP]                         # scan vulnerabilities
+ss                                # show active network and listenning port
+ip a/link/route                   # ip command
+man [command]                     # display manual for chosse command
+sudo su -                         # switch to root user
+useradd [username]                # add new user
+sudo su - [username]              # switch user
+userdel [username]                # delete user
+df                                # check avalible disk space
+du                                # display size of directory and file
+tar                               # compress or extract file
+locate [name]                     # locate somthing with name 
+
+
+
