@@ -37,18 +37,15 @@ class VIPcustomer(Customer):
     def input(self):
         super().input()
 
-        self.chietkhau = float(input("Chiet khau : "))
+        self.chietkhau = int(input("Chiet khau : "))
 
     def output(self):
         super().output()
-        print(f"Chiet khau : {self.chietkhau}")
+        print(f"Chiet khau : {self.chietkhau}%")
         print(f"Tinh tien : {self.tinhtien()}")
 
     def tinhtien(self):
-        return float(
-            (self.dongia * self.soluong)
-            - ((self.dongia * self.soluong) * self.chietkhau)
-        )
+        return float((self.dongia * self.soluong)- ((self.dongia * self.soluong / 100)* self.chietkhau))
 
 
 def ghi(name, dskh):
@@ -71,11 +68,11 @@ def main():
         vip = VIPcustomer()
         vip.input()
         list.append(vip)
-    ghi("/home/inori/Documents/Code/Python/kt_py/danhsachkh.dat", list)
+    ghi("D:/Codetalker/Code/Python/python-cheat-sheet/OOP/danhsachkh.dat", list)
 
     print("Danh sach khach vip vua nhap la : ")
 
-    dskh = doc("/home/inori/Documents/Code/Python/kt_py/danhsachkh.dat")
+    dskh = doc("D:/Codetalker/Code/Python/python-cheat-sheet/OOP/danhsachkh.dat")
     for kh in dskh:
         kh.output()
         tong_tien += kh.tinhtien()
@@ -85,3 +82,4 @@ def main():
 
 
 main()
+
