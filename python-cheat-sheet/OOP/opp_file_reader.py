@@ -2,7 +2,7 @@ import pickle
 
 
 class Customer:
-    def __int__(self):
+    def __init__(self):
         self.makh = ""
         self.tenkh = ""
         self.diachi = ""
@@ -30,7 +30,7 @@ class Customer:
 
 
 class VIPcustomer(Customer):
-    def __int__(self):
+    def __init__(self):
         super().__int__()
         self.chietkhau = ""
 
